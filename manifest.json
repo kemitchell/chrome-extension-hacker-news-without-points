@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "Hacker News Without Stats",
+  "short_name": "Hacker News Without Stats",
+  "version": "1.0.0",
+  "description": "remove points from news.ycombinator.com",
+  "author": "K.E. Mitchell",
+  "content_scripts": [
+    {
+      "matches": [
+        "*://news.ycombinator.com/*"
+      ],
+      "js": [
+        "onload.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "permissions": [
+    "tabs"
+  ]
+}
